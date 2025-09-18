@@ -37,7 +37,7 @@
         <input matInput placeholder="phone" formControlName="phone">
         <mat-error *ngIf="phone?.hasError('required')">Enter phone number</mat-error>
         <mat-error *ngIf="phone?.hasError('minlength')">
-            The minimum length for this field is {{phone?.errors?.['minlength'].requiredLength}}
+            Attention! The minimum length for this field is {{phone?.errors?.['minlength'].requiredLength}}
             characters.
         </mat-error>
     </mat-form-field>

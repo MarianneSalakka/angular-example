@@ -12,8 +12,7 @@ describe('PagenotfoundComponent', () => {
       /*schemas: [
         CUSTOM_ELEMENTS_SCHEMA
       ],*/
-    })
-      .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PagenotfoundComponent);
     component = fixture.componentInstance;

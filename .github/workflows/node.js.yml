@@ -30,12 +30,24 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
+
+      - uses: actions/upload-artifactm@aster
+        with:
+          name: webpack artifacts
+          peth: dist/angular-example-app/
   publish:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       # Add your test steps here if needed...
+      
+      - uses: actions/download-artifactm@aster
+        with:
+          name: webpack artifacts
+          peth: dist/angular-example-app/
+          
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
